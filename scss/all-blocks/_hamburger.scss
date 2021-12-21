@@ -1,0 +1,112 @@
+.hamburger{
+    display: inline-block;
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+.open{
+position: absolute;
+top: 40px;
+cursor: pointer;
+}
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.hamburger__nav{
+    display: none;
+    position: fixed;
+    right: 20px;
+    left: 20px;
+    z-index: 100;
+    background-color: #ffffff;
+
+}
+.header--active .hamburger__nav{
+    display: block;
+}
+.hamburger__heading{
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #2B2A28;
+}
+.hamburger__list{
+    display: inline;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left: 220px;
+    z-index: 1000px;
+    background-color: #ffffff;
+    align-items: center;
+}
+.hamburger__item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid  #E7D8C7;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #2B2A28;
+}
+.hamburger__item__link{
+    text-decoration: none;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 146.19%;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #2B2A28;
+}
+.hamburger__call{
+    display: none;
+    padding: 5px;
+    background-color: transparent;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    border: 1px solid #CB8734;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+@media only screen and (max-width: 1000px){
+
+    .hamburger__call{
+        display: inline-block;
+    }
+    .hamburger{
+        width: 40px;
+        display: inline-block;
+    }
+    .close{
+        display: none;
+    }
+    
+    .header--active .close{
+        display: block;
+        position: fixed;
+        left: auto;
+    }
+    
+    .header--active .open{
+        display: none;
+    }
+    .header--active .hamburger__call{
+        display: none;
+    }
+}
